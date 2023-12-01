@@ -1,0 +1,10 @@
+extension View {
+    func animationStopped<Value: VectorArithmetic>(observedValue: Value,
+                                                mutableValue: Binding<Value>,
+                                                isStop: Binding<Bool>) -> some View {
+        self.modifier(AnimationStopModifier(observedValue: observedValue,
+                                            mutableValue: mutableValue,
+                                            isStop: isStop))
+    }
+}
+
